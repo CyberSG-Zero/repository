@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Home | CyberSG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <link rel="icon" type="image/x-icon" href="./assets/images/myself.avif">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <meta name="description" content="Graphic designer, Web designer and Illustrator experimenting all paths in design. Always looking for the best solution." />
+</head>
+<body>
+  <!-- Header -->
+  <header class="nav">
+    <div class="header-wrap">
+        <nav class="navbar">
+          <a href="/" aria-current="page" class="navbar-brand w-inline-block w--current">
+            <img src="https://cdn.prod.website-files.com/673e879d812768222bf37f48/673ea64b61f57337a04511da_Vectors-Wrapper.svg" loading="lazy" width="207" height="62" alt="" class="brand_logo">
+          </a>
+          <div class="hamburger-icon">
+            <label for="dropdown">
+              <div class="bar bar1"></div>
+              <div class="bar bar2"></div>
+              <div class="bar bar3"></div>  
+            </label>
+            <input type="checkbox" id="dropdown" name="dropdown">
+          </div>
+        </nav>
+    </div>
+
+    <ul class="pages">                   
+        <li><a href="#inicio" title="Inicio">Portafolio</a></li>
+        <li><a href="#productos" title="Productos">About</a></li>
+        <li><a href="#servicio" title="Servicio">Contact</a></li>
+    </ul> 
+  </header>
+  <!-- Header -->
+  <main>
+      <!-- Hero -->
+    <section id="content">
+      <div class="content-header">
+        <div class="text-changer">
+          <div class="roles-container"> 
+            <span class="role">Web Developer</span>
+            <span class="role">Product Designer</span>
+            <span class="role">UX/UI Designer</span>
+            <span class="role">Graphic Designer</span>
+            <span class="role">Web Developer</span>
+          </div>
+        </div>
+        <div class="content-subtitle">based in Lima, Perú</div>
+        <div class="content-description">Always looking for the best solution for my client.</div>
+      </div>
+    </section>
+    <!-- Hero-->
+
+    <!-- Projects Section -->
+    <section class="section">
+      <div class="image-gallery">
+        <a class="video-container" href="#">
+          <video loop autoplay class="image-large" src="./assets/videos/arquitech.mp4"></video>
+        </a>
+        <div class="image-small-container">
+          <div class="video-container">
+            <video loop autoplay class="image-small" src="./assets/videos/anilist.mp4"></video>
+          </div>
+          <a class="image-small" href="#">
+              <img class="image-small" src="./assets/images/cacao.avif" />
+          </a>
+
+          <a class="image-small" href="#">
+            <img class="image-small" src="./assets/images/drcaramelo.avif" />
+        </a>  
+      </div>
+        <a class="button" href="#">
+            <div>See all project</div>
+        </a>
+      </div>
+    </section>
+  </main>
+  
+<!-- Footer -->
+  <footer>
+    <div class="footer">
+      <div class="footer-image">
+        <img class="img" src="./assets/images/myself.avif" />
+      </div>
+      <div class="footer-section">
+        <a class="footer-link" href="#">
+          <div>Home</div>
+        </a>
+        <a class="footer-link" href="#">
+          <div>Portfolio</div>
+        </a>
+        <a class="footer-link" href="#">
+          <div>About</div>
+        </a>
+      </div>
+      
+      <div class="footer-section contact">
+        <div>luissalas2706@gmail.com</div>
+      </div>
+      
+      <div class="footer-section contact">
+        <div>Always looking for the best solution for my client.</div>
+        <div class="footer-border"></div>
+      </div>
+    </div>
+        
+    <div class="footer-bottom">
+      <div class="footer-copyright">© 2025 CyberSG</div>
+      <div class="footer-icon">
+        <div class="footer-icon-inner"></div>
+      </div>
+      <div class="footer-icon">
+        <div class="footer-icon-inner"></div>
+      </div>
+      <div class="contact-section">
+        <div class="contact-box">
+          <div class="contact-icon">
+            <div class="contact-icon-inner"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cursor"></div>
+
+  <script>
+    const links = document.querySelectorAll('a');
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    links.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        cursor.classList.add('hover');
+    });
+    link.addEventListener('mouseleave', () => {
+        cursor.classList.remove('hover');
+    });
+});
+  </script>
+  <!-- <script async src="https://events.framer.com/script" data-fid="985a399c72b0c7d44faf01b44bc8682a6a8ce9998fe807d89aa4cbc9bcb6f5d7"></script> -->
+</body>
+</html>
+
