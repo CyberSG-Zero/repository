@@ -14,32 +14,6 @@
   <meta name="description" content="Graphic designer, Web designer and Illustrator experimenting all paths in design. Always looking for the best solution." />
 </head>
 <body>
-  <!-- Header -->
-  <header class="nav">
-    <div class="header-wrap">
-        <nav class="navbar">
-          <a href="/" aria-current="page" class="navbar-brand w-inline-block w--current">
-            <div class="logo_text">CyberSG</div>
-<!--             <img src="https://cdn.prod.website-files.com/673e879d812768222bf37f48/673ea64b61f57337a04511da_Vectors-Wrapper.svg" loading="lazy" width="207" height="62" alt="" class="brand_logo"> -->
-          </a>
-          <div class="hamburger-icon">
-            <label for="dropdown">
-              <div class="bar bar1"></div>
-              <div class="bar bar2"></div>
-              <div class="bar bar3"></div>  
-            </label>
-            <input type="checkbox" id="dropdown" name="dropdown">
-          </div>
-        </nav>
-    </div>
-
-    <ul class="pages">                   
-        <li><a href="#inicio" title="Inicio">Portafolio</a></li>
-        <li><a href="#productos" title="Productos">About</a></li>
-        <li><a href="#servicio" title="Servicio">Contact</a></li>
-    </ul> 
-  </header>
-  <!-- Header -->
   <main>
       <!-- Hero -->
     <section id="content">
@@ -57,7 +31,6 @@
         <div class="content-description">Always looking for the best solution for my client.</div>
       </div>
     </section>
-    <!-- Hero-->
 
     <!-- Projects Section -->
     <section class="section">
@@ -66,7 +39,7 @@
           <video loop autoplay muted class="image-large" src="./assets/videos/arquitech.mp4"></video>
         </a>
         <div class="image-small-container">
-          <a class="video-container">
+          <a class="video-container" href="#">
             <video class="image-small" loop autoplay muted src="./assets/videos/anilist.mp4"></video>
           </a>
           <a class="image-small" href="#">
@@ -83,73 +56,22 @@
       </div>
     </section>
   </main>
-  
-<!-- Footer -->
-  <footer>
-    <div class="footer">
-      <div class="footer-image">
-        <img class="img" src="./assets/images/myself.avif" />
-      </div>
-      <div class="footer-section">
-        <a class="footer-link" href="#">
-          <div>Home</div>
-        </a>
-        <a class="footer-link" href="#">
-          <div>Portfolio</div>
-        </a>
-        <a class="footer-link" href="#">
-          <div>About</div>
-        </a>
-      </div>
-      
-      <div class="footer-section contact">
-        <div>luissalas2706@gmail.com</div>
-      </div>
-      
-      <div class="footer-section contact">
-        <div>Always looking for the best solution for my client.</div>
-        <div class="footer-border"></div>
-      </div>
-    </div>
-        
-    <div class="footer-bottom">
-      <div class="footer-copyright">© 2025 CyberSG</div>
-      <div class="footer-icon">
-        <div class="footer-icon-inner"></div>
-      </div>
-      <div class="footer-icon">
-        <div class="footer-icon-inner"></div>
-      </div>
-      <div class="contact-section">
-        <div class="contact-box">
-          <div class="contact-icon">
-            <div class="contact-icon-inner"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <div class="cursor"></div>
 
   <script>
-    const links = document.querySelectorAll('a');
-    const cursor = document.querySelector('.cursor');
-    document.addEventListener('mousemove', e => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
+    document.addEventListener("DOMContentLoaded", function () {
+    Promise.all([
+    fetch("./assets/components/header.html").then(response => response.text()),
+    fetch("./assets/components/footer.html").then(response => response.text())
+    ]).then(([header, footer]) => {
+    document.body.insertAdjacentHTML("afterbegin", header);
+    document.body.insertAdjacentHTML("beforeend", footer);
+    initCursor(); // Inicializa el cursor después de cargar header y footer
     });
-
-    links.forEach(link => {
-    link.addEventListener('mouseenter', () => {
-        cursor.classList.add('hover');
     });
-    link.addEventListener('mouseleave', () => {
-        cursor.classList.remove('hover');
-    });
-});
   </script>
-  <!-- <script async src="https://events.framer.com/script" data-fid="985a399c72b0c7d44faf01b44bc8682a6a8ce9998fe807d89aa4cbc9bcb6f5d7"></script> -->
+  <script src="./assets/js/mouse.js"></script>
+
 </body>
 </html>
-
