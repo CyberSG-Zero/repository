@@ -19,7 +19,12 @@ body {
     background-color: var(--bg-color);
     color: #fff;
     width: 100%;
+    cursor: none;
 }
+
+a {
+    cursor: none;
+  }
 .header {
     position: relative;
     background: var(--bg-color);
@@ -146,6 +151,7 @@ input {
 }
 
 .pages {
+    align-items: center;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -198,6 +204,31 @@ main {
     width: 100%;
     padding: 2rem;
     gap: 1rem;
+}
+
+.section {
+    width: 100%;
+    max-width: 1440px;
+
+}
+.center {
+    display: flex;
+    justify-content: center;
+}
+.proyectos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 900px;
+
+    & svg {
+        width: 2.5em;
+        height: auto;
+    }
+}
+
+.display_text {
+    font-size: 3rem;
 }
 .text {
     margin-top: 0;
@@ -376,6 +407,18 @@ video {
     justify-content: center;
     overflow: hidden;
     border-radius: 8px;
+
+}
+
+.image-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    color: var(--text-color);
+    font-weight: 700;
+    
 }
 
 .image-small-container {
@@ -389,13 +432,23 @@ video {
     object-fit: cover;
     border-radius: 8px;
     max-height: 20rem;
-
+    
     & img {
         object-fit: cover;
         height: 100%;
     }
 }
 
+.vertical {
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.image_big {
+    max-height: 36rem;
+}
 
 .block {
     margin: 10px 0;
@@ -545,6 +598,7 @@ footer {
     .img {
         height: 250px;
     }
+
 }
 
 @media (min-width: 1070px) {
@@ -657,6 +711,5 @@ footer {
     .cursor.hover {
         transform: scale(3);
     }
-    
 
 }
