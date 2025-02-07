@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>About | CyberSG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <link rel="icon" type="image/x-icon" href="./assets/images/myself.avif">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <meta name="description" content="Graphic designer, Web designer and Illustrator experimenting all paths in design. Always looking for the best solution." />
+</head>
+<body>
+  <main>
+      <!-- Hero -->
+    <section id="content">
+      <div class="content-header">
+        <div class="text-changer">
+          <div class="roles-container"> 
+            <span class="role">Web Developer</span>
+            <span class="role">Product Designer</span>
+            <span class="role">UX/UI Designer</span>
+            <span class="role">Graphic Designer</span>
+            <span class="role">Web Developer</span>
+          </div>
+        </div>
+        <div class="content-subtitle">based in Lima, Perú</div>
+        <div class="content-description">Always looking for the best solution for my client.</div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section center">
+      <div class="image-gallery">
+        <a class="video-container" href="#">
+          <video loop autoplay muted class="image-large" src="./assets/videos/arquitech.mp4"></video>
+        </a>
+        <div class="image-small-container">
+          <a class="video-container" href="#">
+            <video class="image-small" loop autoplay muted src="./assets/videos/anilist.mp4"></video>
+          </a>
+          <a class="image-small" href="#">
+              <img class="image-small" src="./assets/images/cacao.avif" />
+          </a>
+
+          <a class="image-small" href="#">
+            <img class="image-small" src="./assets/images/drcaramelo.avif" />
+        </a>  
+      </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="skills-wrapper"></div>
+    </section>
+  </main>
+
+  <div class="cursor"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    Promise.all([
+    fetch("./assets/components/header.html").then(response => response.text()),
+    fetch("./assets/components/footer.html").then(response => response.text())
+    ]).then(([header, footer]) => {
+    document.body.insertAdjacentHTML("afterbegin", header);
+    document.body.insertAdjacentHTML("beforeend", footer);
+    initCursor(); // Inicializa el cursor después de cargar header y footer
+    });
+    });
+  </script>
+  <script src="./assets/js/mouse.js"></script>
+  <script src="./assets/js/smooth-scroll.js"></script>
+
+</body>
+</html>
