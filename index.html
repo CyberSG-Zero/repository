@@ -7,7 +7,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- gabarito font -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+  <!-- Awesome font -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- Open Sans font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   
   <link rel="icon" type="image/x-icon" href="./assets/images/myself.avif">
   <link rel="stylesheet" href="./assets/css/styles.css">
@@ -25,7 +33,7 @@
 <body>
   <main>
       <!-- Hero -->
-    <section id="content">
+    <section class="section">
       <div class="content-header">
         <div class="text-changer">
           <div class="roles-container"> 
@@ -36,14 +44,89 @@
             <span class="role">Web Developer</span>
           </div>
         </div>
-        <div class="content-subtitle">based in Lima, Perú</div>
-        <div class="content-description">Always looking for the best solution for my client.</div>
+        <div class="content-description">“Always looking for the <span class="text-span">best solution</span> for my client.”<br></br>
+        
+        Mixing lots of technologies from code to design to bring <span class="text-span">clean, impact</span> and <span class="text-span">enjoyable</span> projects.</div>
+        <a class="button outlink" href="/">Proyectos <span></span></a>
+        <div class="footer-icon-wrapper">
+          <a class="footer-icon button" href="/">Resume</a>
+          <a class="footer-icon" href="https://www.instagram.com/cybersg_zero/" target="_blank">     
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
+          </a>
+          <a class="footer-icon" href="https://www.linkedin.com/in/cybersg/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91z"/></svg>
+          </a>
+        </div>
       </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="section horizontal">
+      <div class="img_container">
+        <div class="img-block horizontal">
+          <img src="./assets/images/King.jpg" alt="">
+          <img class="image-left" src="./assets/images/King-left.jpg" alt="">
+        </div>
+        <img class="image-bottom" src="./assets/images/King-bottom.jpg" alt="">
+      </div>
+      <div class="content-description full-width">
+        I'm a passionate Visual Designer, born in Lima, Peru and trained at LABASAD Barcelona School of Arts & Design. My career has led me to work in <span class="text-span">UX/UI</span> and <span class="text-span">web design studios</span>, where I've had the opportunity to develop my skills as a digital artist and art director.
+        I firmly believe that the success of a project lies in <span class="text-span">collaboration</span> and <span class="text-span">the creation of impactful visual experiences.</span> I'm excited about the idea of working with you to <span class="text-span">bring your ideas to life</span> and together build a project that exceeds your expectations
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section">
+      <div class="content-description">
+        In my day-to-day work, I focus on the design and development of digital products for websites and web applications:
+      </div>
+      <div class="card-wrapper">
+        <div class="card">
+          <pixel-canvas></pixel-canvas>
+          <div class="card-content">
+            <div class="card_top">01</div>
+            <h2 class="card-title">Frontend Development</h2>
+            <p class="card-description">Development of visual appearance to improve the user's web experience.</p>
+          </div>
+        </div>
+
+        <div class="card" style="--active-color: #e0f2fe">
+          <pixel-canvas data-gap="10" data-speed="25" data-colors="#e0f2fe, #7dd3fc, #0ea5e9"></pixel-canvas>
+          <div class="card-content">
+            <div class="card_top">02</div>
+            <h2 class="card-title">Visual Design</h2>
+            <p class="card-description">UI • Aesthetic creation of visual elements for the interface.</p>
+          </div>
+        </div>
+        
+        <div class="card" style="--active-color: #fef08a">
+          <pixel-canvas data-gap="3" data-speed="20" data-colors="#fef08a, #fde047, #eab308"></pixel-canvas>
+          <div class="card-content">
+            <div class="card_top">03</div>
+            <h2 class="card-title">Interface Design</h2>
+            <p class="card-description">UX • Effective design of the user interface.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card" style="--active-color: #fecdd3">
+          <pixel-canvas data-gap="6" data-speed="80" data-colors="#fecdd3, #fda4af, #e11d48" data-no-focus></pixel-canvas>
+          <div class="card-content">
+            <div class="card_top">04</div>
+            <h2 class="card-title">Testing</h2>
+            <p class="card-description">Testing to ensure software functionality and quality.</p>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <!-- Projects Section -->
     <section class="section center">
       <div class="image-gallery">
+        <div class="content-description">
+          Here is some of my achievements with my successful clients
+        </div>
         <a class="video-container" href="#">
           <video loop autoplay muted class="image-large" src="./assets/videos/arquitech.mp4"></video>
         </a>
@@ -82,6 +165,7 @@
   </script>
   <script src="./assets/js/mouse.js"></script>
   <script src="./assets/js/smooth-scroll.js"></script>
+  <script src="./assets/js/pixel-canvas.js"></script>
 
 </body>
 </html>
