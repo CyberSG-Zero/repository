@@ -21,12 +21,12 @@ body {
     background-color: var(--bg-color);
     color: #fff;
     width: 100%;
-    cursor: none;
+    /* cursor: none; */
 }
 
-a {
+/* a {
     cursor: none;
-  }
+  } */
 .header {
     position: relative;
     background: var(--bg-color);
@@ -38,8 +38,11 @@ a {
 }
 
 a.logo-text{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     color: white;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 800;
     text-decoration: none;
 }
@@ -80,6 +83,10 @@ a.logo-text{
     flex-direction: column;
     align-items: center;
     text-align: center;
+}
+
+.hamburger-icon {
+    cursor: pointer;
 }
 
 .hamburger-icon .bar {
@@ -161,7 +168,7 @@ input {
     overflow: hidden;
     height: 0;
     text-decoration: none;
-    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-size: clamp(0.875rem, 3vw, 1rem);
     transition: height .5s;
     interpolate-size: allow-keywords;
     padding: 0;
@@ -205,18 +212,33 @@ main {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
     gap: 1rem;
 }
 
 .section {
     display: flex;
+    background-color: var(--bg-color);
     flex-direction: column;
     width: 100%;
     max-width: 1600px;
     gap: 1.5rem;
+    padding: 1rem 1rem;
+    margin: auto;
 
 }
+
+.section.full-width {
+    padding: 0;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 
 .horizontal {
     gap: 2.5rem;
@@ -268,7 +290,6 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 1600px;
 
     & svg {
         width: 2.5em;
@@ -282,6 +303,7 @@ main {
     font-size: 3rem;
 }
 .text {
+    font-size: clamp(1rem, 3vw, 1.2rem);;
     margin-top: 0;
     margin-bottom: 0;
     line-height: 1.2em;
@@ -715,12 +737,11 @@ video {
 .experience-container.proyectos {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     color: var(--accent-color);
     gap: 4rem;
-    border-bottom: solid 0.5px var(--accent-color);
-    
+    border-bottom: solid 0.5px var(--accent-color);  
 }
 .experience-container.proyectos :nth-child(2) {
     max-width: 36rem;
@@ -790,6 +811,13 @@ footer {
     object-fit: cover;
 }
 
+.img.header{
+    width: 100px;
+    max-height: 50px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
 .footer-link {
     display: flex;
     text-align: left;
@@ -843,10 +871,23 @@ footer {
 }
 
 @media (min-width: 768px){
+
+    main {
+        padding: 2rem;
+    }
+
+    a.logo-text{
+        font-size: 2.25rem;
+
+    }
     .image-small-container {
         flex-direction: row;
     }
     
+    .experience-container.proyectos {
+        flex-direction: row;
+    }
+
     .image-gallery.proyectos {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -911,6 +952,14 @@ footer {
         opacity: 1;
         transition: height 0.3s ease, opacity 0.3s ease;
 
+    }
+    .section {
+        padding: 1rem 8rem;
+
+    }
+    
+    .section.full-width {
+        height: 50vh;
     }
 
     .horizontal{
